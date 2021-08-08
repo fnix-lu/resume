@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy to Github Pages
+name: Deploy to GitHub Pages
 
 # Controls when the action will run.
 on:
@@ -25,26 +25,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Install yarn
-        run: sudo npm i -g yarn
+      - name: Install and Build
+        run: yarn && yarn build
 
-      # Runs a set of commands using the runners shell
-      - name: Build project
-        run: |
-          yarn
-          yarn build
-
-      - name: Deploy project
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          SUPER_SECRET: ${{ secrets.SuperSecret }}
-        run: |
-          cd build
-
-          git init
-          git add -A
-          git commit -m 'deploy'
-
-          git push -f https://github.com/fnix-lu/resume.git master:gh-pages
-
-          cd -
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: build
