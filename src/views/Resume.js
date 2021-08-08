@@ -4,9 +4,6 @@ import css from './Resume.scss'
 import resume from '@/data/resume'
 
 class Resume extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     return (
       <div className={css['page']}>
