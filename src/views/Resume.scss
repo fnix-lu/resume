@@ -1,7 +1,158 @@
 .page {
-  width: 800px;
+  max-width: 800px;
   margin: auto;
+  padding: 24px 12px;
   box-sizing: border-box;
-  padding: 32px;
-  background: #fbfbfb;
+  line-height: 1.8;
+  color: #333333;
+  white-space: pre-line;
+  text-align: justify;
+}
+
+a {
+  color: #00c2b3;
+}
+
+.list-row {
+  display: flex;
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    margin-right: 8px;
+    border-left: 6px solid #00c2b3;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    opacity: .3;
+    position: relative;
+    top: 8px;
+  }
+}
+
+.resume-section {
+  padding: 12px 16px;
+  box-shadow: 0 0 12px #f2f2f2;
+  border-radius: 12px;
+  & + .resume-section {
+    margin-top: 12px;
+  }
+  &__title {
+    margin-bottom: 8px;
+    color: #00c2b3;
+  }
+}
+
+.profile {
+  .mine-name {
+    font-size: 24px;
+    margin-bottom: 4px;
+    color: #000000;
+    .desc {
+      color: #cccccc;
+      font-size: 16px;
+      margin-left: 16px;
+    }
+  }
+  .mine-info {
+    color: #666666;
+    > p > span + span {
+      &::before {
+        content: '·';
+        padding: 0 8px;
+      }
+    }
+  }
+}
+
+.enterprises {
+  .enterprise-item {
+    & + .enterprise-item {
+      margin-top: 16px;
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .enterprise-name {
+      font-weight: 500;
+      font-size: 15px;
+      color: #000000;
+    }
+    .enterprise-time {
+      color: #cccccc;
+      font-size: 13px;
+    }
+    .enterprise-post {
+      color: #999999;
+      font-size: 13px;
+    }
+    .enterprise-duty {
+      margin-top: 8px;
+    }
+  }
+}
+
+.university {
+  .university-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: #000000;
+  }
+  .university-info {
+    color: #666666;
+    > span + span {
+      &::before {
+        content: '·';
+        padding: 0 8px;
+      }
+    }
+  }
+  .university-major {
+    margin-top: 8px;
+  }
+}
+
+.projects {
+  .project-item {
+    & + .project-item {
+      margin-top: 16px;
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .project-name {
+      font-weight: 500;
+      font-size: 15px;
+      color: #000000;
+    }
+    .project-time {
+      color: #cccccc;
+      font-size: 13px;
+    }
+    .project-tech {
+      color: #999999;
+      font-size: 13px;
+    }
+    .project-info {
+      margin-top: 8px;
+      &__title {
+        color: #000000;
+        position: relative;
+        &::after {
+          content: '';
+          width: 4em;
+          height: 4px;
+          background: #00c2b3;
+          opacity: .3;
+          position: absolute;
+          left: 0;
+          bottom: 4px;
+          z-index: -1;
+        }
+      }
+    }
+  }
 }

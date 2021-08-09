@@ -9,8 +9,8 @@ class Resume extends Component {
       <div className={css['page']}>
         <section className={css['resume-section']}>
           <div className={css['profile']}>
-            <h1>{resume.name}<span>个人简历</span></h1>
-            <div>
+            <h1 className={css['mine-name']}>{resume.name}<span className={css['desc']}>个人简历</span></h1>
+            <div className={css['mine-info']}>
               <p>
                 <span>{resume.university.name}</span>
                 <span>{resume.university.grade}</span>
@@ -26,7 +26,9 @@ class Resume extends Component {
                 <span>{resume.email}</span>
               </p>
               <p>
-                <span>{resume.github}</span>
+                <span>
+                  <a href={resume.github} target="_blank">{resume.github}</a>
+                </span>
               </p>
             </div>
           </div>
@@ -35,7 +37,7 @@ class Resume extends Component {
           <h3 className={css['resume-section__title']}>技术能力</h3>
           <div className={css['skills']}>
             {resume.skills.map(skill => (
-              <p>{skill}</p>
+              <p className={css['list-row']}>{skill}</p>
             ))}
           </div>
         </section>
@@ -44,14 +46,14 @@ class Resume extends Component {
           <div className={css['enterprises']}>
             {resume.enterprises.map(enterprise => (
               <div className={css['enterprise-item']}>
-                <div>
-                  <span>{enterprise.name}</span>
-                  <span>{`${enterprise.checkin} - ${enterprise.checkout || 'Now'}`}</span>
+                <div className={css['enterprise-item__header']}>
+                  <span className={css['enterprise-name']}>{enterprise.name}</span>
+                  <span className={css['enterprise-time']}>{`${enterprise.checkin} - ${enterprise.checkout || 'Now'}`}</span>
                 </div>
-                <div>{enterprise.post}</div>
-                <div>
+                <div className={css['enterprise-post']}>{enterprise.post}</div>
+                <div className={css['enterprise-duty']}>
                   {enterprise.duties.map(duty => (
-                    <p>{duty}</p>
+                    <p className={css['list-row']}>{duty}</p>
                   ))}
                 </div>
               </div>
@@ -61,12 +63,17 @@ class Resume extends Component {
         <section className={css['resume-section']}>
           <h3 className={css['resume-section__title']}>教育经历</h3>
           <div className={css['university']}>
-            <div>{resume.university.name}</div>
-            <div>
+            <div className={css['university-name']}>{resume.university.name}</div>
+            <div className={css['university-info']}>
               <span>{resume.university.grade}</span>
               <span>{`${resume.university.entrance} - ${resume.university.graduation}`}</span>
             </div>
-            <div>专业描述：{resume.university.majors.join('、')}</div>
+            <div className={css['university-major']}>
+              <p>专业描述：</p>
+              {resume.university.majors.map(major => (
+                <p className={css['list-row']}>{major}</p>
+              ))}
+            </div>
           </div>
         </section>
         <section className={css['resume-section']}>
@@ -74,21 +81,23 @@ class Resume extends Component {
           <div className={css['projects']}>
             {resume.projects.map(project => (
               <div className={css['project-item']}>
-                <div>
-                  <span>{project.name}</span>
-                  <span>{`${project.start} - ${project.end}`}</span>
-                </div>
-                <div>{project.site}</div>
-                <div>技术栈：{project.technologies.join(' / ')}</div>
-                <div>
-                  <div>项目简介</div>
-                  <div>{project.description}</div>
+                <div className={css['project-item__header']}>
+                  <span className={css['project-name']}>{project.name}</span>
+                  <span className={css['project-time']}>{`${project.start} - ${project.end}`}</span>
                 </div>
                 <div>
-                  <div>负责任务</div>
-                  <div>
+                  <a href={project.site} target="_blank">{project.site}</a>
+                </div>
+                <div className={css['project-tech']}>技术栈：{project.technologies.join(' / ')}</div>
+                <div className={css['project-info']}>
+                  <div className={css['project-info__title']}>项目简介</div>
+                  <div className={css['project-info__content']}>{project.description}</div>
+                </div>
+                <div className={css['project-info']}>
+                  <div className={css['project-info__title']}>负责任务</div>
+                  <div className={css['project-info__content']}>
                     {project.duties.map(duty => (
-                      <p>{duty}</p>
+                      <p className={css['list-row']}>{duty}</p>
                     ))}
                   </div>
                 </div>
