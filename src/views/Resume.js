@@ -27,7 +27,7 @@ class Resume extends Component {
               </p>
               <p>
                 <span>
-                  <a href={resume.github} target="_blank">{resume.github}</a>
+                  <a href={resume.github} target="_blank" rel="noopener noreferrer">{resume.github}</a>
                 </span>
               </p>
             </div>
@@ -85,9 +85,11 @@ class Resume extends Component {
                   <span className={css['project-name']}>{project.name}</span>
                   <span className={css['project-time']}>{`${project.start} - ${project.end}`}</span>
                 </div>
-                <div>
-                  <a href={project.site} target="_blank">{project.site}</a>
-                </div>
+                {project.site && (
+                  <div>
+                    <a href={project.site} target="_blank" rel="noopener noreferrer">{project.site}</a>
+                  </div>
+                )}
                 <div className={css['project-tech']}>技术栈：{project.technologies.join(' / ')}</div>
                 <div className={css['project-info']}>
                   <div className={css['project-info__title']}>项目简介</div>
