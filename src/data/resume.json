@@ -14,17 +14,17 @@
     ]
   },
   "gender": "男",
-  "age": 29,
-  "experience": 5,
+  "age": 30,
+  "experience": 5.5,
   "city": "苏州",
   "mobile": "15605166518",
   "email": "835913098@qq.com",
   "github": "https://github.com/fnix-lu",
   "skills": [
     "熟练 HTML / CSS / JS / jQuery / Zepto，注重代码质量与优化",
-    "熟练 ES2015+，Promise，Async / Await，JS模块化",
-    "熟练 Vue / Vuex / VueRouter / Axios / Nuxt，理解 PetiteVue，Vue3 的 Composition API 及语法差异",
-    "熟悉 React / Redux",
+    "熟练 ES2015+，Promise，Async / Await，JS 模块化",
+    "熟练 Vue / Vuex / VueRouter / Axios / Nuxt，理解 Vue3 的 Composition API 及语法差异",
+    "熟练 React / MobX",
     "熟练微信小程序及 Taro",
     "熟练使用 UniApp 开发跨端应用",
     "熟练 Element / AntD / iView / Vant 等组件库",
@@ -35,9 +35,20 @@
   ],
   "enterprises": [
     {
+      "name": "苏州盖雅信息技术有限公司",
+      "checkin": "2021.9",
+      "checkout": "",
+      "post": "Web 前端",
+      "duties": [
+        "参与公司低代码表单平台的开发",
+        "使用表单平台配置客户项目页面",
+        "负责与移动平台的对接及相关工作的协调"
+      ]
+    },
+    {
       "name": "苏州筑客互联科技有限公司",
       "checkin": "2020.8",
-      "checkout": "",
+      "checkout": "2021.9",
       "post": "Web 前端",
       "duties": [
         "多个微信小程序的开发迭代",
@@ -73,6 +84,23 @@
     }
   ],
   "projects": [
+    {
+      "name": "低代码表单平台",
+      "site": "https://wfm-s.gaiaworkforce.com",
+      "technologies": [
+        "React",
+        "MobX",
+        "Lodash"
+      ],
+      "start": "2021.9",
+      "end": "",
+      "description": "一个以拖拽控件、添加配置的方式搭建企业工作流项目页面的平台，侧重于绩效考核、预入职、离职等方向。",
+      "duties": [
+        "开发多状态动态锚点树、物品选择器、问卷、树选择器、组织选择器等功能控件",
+        "配置 H5 离职申请、离职详情、离职审批页面",
+        "对接公司移动平台，免登录访问表单平台 H5 页面，协调开通移动平台中的页面入口"
+      ]
+    },
     {
       "name": "DCI 经销商端小程序 + DCI 仓储管理",
       "site": "",

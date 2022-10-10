@@ -83,7 +83,7 @@ class Resume extends Component {
               <div className={css['project-item']}>
                 <div className={css['project-item__header']}>
                   <span className={css['project-name']}>{project.name}</span>
-                  <span className={css['project-time']}>{`${project.start} - ${project.end}`}</span>
+                  <span className={css['project-time']}>{`${project.start} - ${project.end || 'Now'}`}</span>
                 </div>
                 {project.site && (
                   <div>
