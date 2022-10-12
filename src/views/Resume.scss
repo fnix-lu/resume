@@ -1,7 +1,8 @@
 .page {
   max-width: 800px;
   margin: auto;
-  padding: 24px 12px;
+  padding: 16px;
+  padding-bottom: 32px;
   box-sizing: border-box;
   line-height: 1.8;
   color: #333333;
@@ -23,7 +24,7 @@ a {
     border-left: 6px solid #00c2b3;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
-    opacity: .3;
+    opacity: 0.5;
     position: relative;
     top: 8px;
   }
@@ -146,7 +147,7 @@ a {
           width: 4em;
           height: 4px;
           background: #00c2b3;
-          opacity: .3;
+          opacity: 0.5;
           position: absolute;
           left: 0;
           bottom: 4px;
