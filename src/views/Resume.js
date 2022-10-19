@@ -18,7 +18,7 @@ class Resume extends Component {
               <p>
                 <span>{resume.gender}</span>
                 <span>{resume.age}岁</span>
-                <span>{resume.experience}年相关工作经验</span>
+                <span>{resume.experience}年前端相关经验</span>
                 <span>{resume.city}</span>
               </p>
               <p>
