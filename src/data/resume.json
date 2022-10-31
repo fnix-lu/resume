@@ -110,7 +110,7 @@
   "projects": [
     {
       "name": "低代码表单平台",
-      "site": "https://wfm-s.gaiaworkforce.com",
+      "site": "",
       "technologies": ["React", "MobX", "Lodash"],
       "start": "2021.9",
       "end": "",
