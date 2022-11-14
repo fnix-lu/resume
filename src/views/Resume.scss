@@ -182,3 +182,27 @@ a {
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .enterprises {
+    .enterprise-item {
+      &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: initial;
+      }
+    }
+  }
+
+  .projects {
+    .project-item {
+      &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: initial;
+      }
+    }
+  }
+}
