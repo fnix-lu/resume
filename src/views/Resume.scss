@@ -166,6 +166,10 @@ a {
       &__title {
         color: #000000;
         position: relative;
+        & > span {
+          position: relative;
+          z-index: 2;
+        }
         &::after {
           content: '';
           width: 4em;
@@ -175,7 +179,7 @@ a {
           position: absolute;
           left: 0;
           bottom: 4px;
-          z-index: -1;
+          z-index: 1;
         }
       }
     }

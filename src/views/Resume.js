@@ -127,13 +127,17 @@ class Resume extends Component {
                   技术栈：{project.technologies.join(' / ')}
                 </div>
                 <div className={css['project-info']}>
-                  <div className={css['project-info__title']}>项目简介</div>
+                  <div className={css['project-info__title']}>
+                    <span>项目简介</span>
+                  </div>
                   <div className={css['project-info__content']}>
                     {project.description}
                   </div>
                 </div>
                 <div className={css['project-info']}>
-                  <div className={css['project-info__title']}>负责任务</div>
+                  <div className={css['project-info__title']}>
+                    <span>负责任务</span>
+                  </div>
                   <div className={css['project-info__content']}>
                     {project.duties.map((duty) => (
                       <p className={css['list-row']}>{duty}</p>
