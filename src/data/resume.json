@@ -21,23 +21,30 @@
   "email": "835913098@qq.com",
   "github": "https://github.com/fnix-lu",
   "skills": [
-    "熟练 HTML / CSS / JS / jQuery / Zepto，注重代码质量与优化",
+    "熟练 HTML / CSS / JS / jQuery，注重代码质量",
     "熟练 ES2015+，Promise，Async / Await，JS 模块化",
-    "熟练 Vue / Vuex / VueRouter / Axios / Nuxt，理解 Vue3 的 Composition API 及语法差异",
+    "熟练 Vue / Vuex / VueRouter / Axios / Nuxt，熟悉 Vue3 的 Composition API 及语法差异",
     "熟练 React / MobX",
     "熟练 微信小程序及 Taro",
     "熟练 使用 UniApp 开发跨端应用",
     "熟练 Element / AntD / iView / Vant 等组件库",
     "熟悉 Less / Scss / Stylus 样式预处理器",
     "熟练 Git",
+    "理解 JS 设计模式",
+    "理解 Vue 虚拟 DOM 渲染，依赖收集",
     "理解 基于 NodeJS 的模版渲染引擎 EJS / Swig",
     "理解 Java 面向对象，继承、多态、重载、接口等知识，熟悉前后端业务与接口交互，了解数据库"
+  ],
+  "readme": [
+    "毕业后经历了两年多的迷茫，找到了前进的方向；",
+    "程序开发行业日新月异，不进则退；",
+    "起点已然落后，便须更努力攀爬赶超，成长历程稍显崎岖。"
   ],
   "enterprises": [
     {
       "name": "苏州盖雅信息技术有限公司",
       "checkin": "2021.9",
-      "checkout": "",
+      "checkout": "2022.11",
       "post": "Web 前端",
       "duties": [
         "参与公司低代码表单平台的开发",
@@ -60,7 +67,7 @@
       ]
     },
     {
-      "name": "苏州数科智能科技有限公司",
+      "name": "苏州数科智能科技有限公司（注销）",
       "checkin": "2019.5",
       "checkout": "2020.8",
       "post": "Web 前端",
@@ -83,10 +90,11 @@
       ]
     },
     {
-      "name": "江苏慧库天下软件科技有限公司",
+      "name": "（非前端）江苏慧库天下软件科技有限公司",
       "checkin": "2015.10",
       "checkout": "2017.7",
       "post": "Help Desk",
+      "noFE": true,
       "duties": [
         "解决公司电脑网络设备的使用问题，维护用网环境的稳定",
         "公司新办公室电话、网络方案设计，联络实施",
@@ -95,10 +103,11 @@
       ]
     },
     {
-      "name": "常州珞珈中网信息技术有限公司",
+      "name": "（非前端）常州珞珈中网信息技术有限公司",
       "checkin": "2014.3",
       "checkout": "2015.9",
       "post": "弱电工程项目经理",
+      "noFE": true,
       "duties": [
         "客户企业的网络、计算机运维，针对网络需求提供解决方案",
         "网络设备的安装调试，配置网管交换机的基础参数",
@@ -113,7 +122,7 @@
       "site": "",
       "technologies": ["React", "MobX", "Lodash"],
       "start": "2021.9",
-      "end": "",
+      "end": "2022.11",
       "description": "一个以拖拽控件、添加配置的方式搭建企业工作流项目页面的平台，侧重于绩效考核、预入职、离职等方向。",
       "duties": [
         "开发多状态动态锚点树、物品选择器、问卷、树选择器、组织选择器等功能控件",
