@@ -189,6 +189,7 @@
       ]
     },
     {
+      "hidden": true,
       "name": "工品一号业务系统改版重写",
       "site": "",
       "technologies": ["Vue", "Element", "Axios"],

@@ -104,48 +104,50 @@ class Resume extends Component {
         <section className={css['resume-section']}>
           <h3 className={css['resume-section__title']}>项目案例</h3>
           <div className={css['projects']}>
-            {resume.projects.map((project) => (
-              <div className={css['project-item']}>
-                <div className={css['project-item__header']}>
-                  <span className={css['project-name']}>{project.name}</span>
-                  <span className={css['project-time']}>{`${project.start} - ${
-                    project.end || 'Now'
-                  }`}</span>
+            {resume.projects.map((project) =>
+              project.hidden ? null : (
+                <div className={css['project-item']}>
+                  <div className={css['project-item__header']}>
+                    <span className={css['project-name']}>{project.name}</span>
+                    <span className={css['project-time']}>{`${
+                      project.start
+                    } - ${project.end || 'Now'}`}</span>
+                  </div>
+                  {project.site && (
+                    <div>
+                      <a
+                        href={project.site}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.site}
+                      </a>
+                    </div>
+                  )}
+                  <div className={css['project-tech']}>
+                    技术栈：{project.technologies.join(' / ')}
+                  </div>
+                  <div className={css['project-info']}>
+                    <div className={css['project-info__title']}>
+                      <span>项目简介</span>
+                    </div>
+                    <div className={css['project-info__content']}>
+                      {project.description}
+                    </div>
+                  </div>
+                  <div className={css['project-info']}>
+                    <div className={css['project-info__title']}>
+                      <span>负责任务</span>
+                    </div>
+                    <div className={css['project-info__content']}>
+                      {project.duties.map((duty) => (
+                        <p className={css['list-row']}>{duty}</p>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                {project.site && (
-                  <div>
-                    <a
-                      href={project.site}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {project.site}
-                    </a>
-                  </div>
-                )}
-                <div className={css['project-tech']}>
-                  技术栈：{project.technologies.join(' / ')}
-                </div>
-                <div className={css['project-info']}>
-                  <div className={css['project-info__title']}>
-                    <span>项目简介</span>
-                  </div>
-                  <div className={css['project-info__content']}>
-                    {project.description}
-                  </div>
-                </div>
-                <div className={css['project-info']}>
-                  <div className={css['project-info__title']}>
-                    <span>负责任务</span>
-                  </div>
-                  <div className={css['project-info__content']}>
-                    {project.duties.map((duty) => (
-                      <p className={css['list-row']}>{duty}</p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </section>
       </div>
